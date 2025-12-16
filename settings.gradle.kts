@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "安卓应用示例项目"
 include(":app")
 include(":tv_box")
+include(":info_viewer")
