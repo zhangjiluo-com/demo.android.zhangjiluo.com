@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "DemoOfAndroidTVApp"
+rootProject.name = "安卓应用示例项目"
 include(":app")
+include(":tv_box")

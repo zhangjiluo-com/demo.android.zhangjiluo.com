@@ -1,33 +1,38 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "com.zhangjiluo.android.demo"
-    compileSdk = 36
+    namespace = "com.zhangjiluo.app.demo"
+    compileSdk {
+        version = release(36)
+    }
 
     defaultConfig {
-        applicationId = "com.zhangjiluo.android.demo"
-        minSdk = 28
+        applicationId = "com.zhangjiluo.app.demo"
+        minSdk = 36
         targetSdk = 36
         versionCode = 1
-        versionName = "1.0"
-
+        versionName = "0.0.1"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = true
-            isShrinkResources = true
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
 }
 
-dependencies {
-    implementation("androidx.constraintlayout:constraintlayout:2.2.1") // 约束布局
-}
+dependencies {}

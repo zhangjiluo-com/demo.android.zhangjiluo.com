@@ -1,4 +1,4 @@
-package com.zhangjiluo.android.demo;
+package com.zhangjiluo.app.demo.tv_box;
 
 import android.app.Activity;
 import android.os.Bundle;
